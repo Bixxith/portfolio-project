@@ -6,3 +6,4 @@ psycopg2-binary
 whitenoise
 pillow
 django-environ
+environ
