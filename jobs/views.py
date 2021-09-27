@@ -9,3 +9,7 @@ def detail(request, job_id):
     job_detail = get_object_or_404(Job, pk=job_id)
     print(job_detail)
     return render(request, 'jobs/detail.html', {'job':job_detail})
+
+def portfolio(request):
+    jobs = Job.objects
+    return render(request, 'jobs/portfolio.html', {'jobs':jobs})
