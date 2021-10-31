@@ -39,6 +39,10 @@
         }
         
         ;
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+        * {
+            font-family: 'Open Sans', sans-serif;
+        }
     </style>
 
 
@@ -59,11 +63,14 @@
                 <a href="{% url 'portfolio' %}" class="btn btn-lg btn-secondary fw-bold border-white bg-black ">Portfolio</a>
                 <a class="btn btn-lg btn-secondary fw-bold border-primary bg-black " href="{% url 'aboutme' %}">About Me</a>
 
-                <a class="btn btn-lg btn-secondary fw-bold border-primary bg-black " href="# ">My Blog</a>
+                <a class="btn btn-lg btn-secondary fw-bold border-primary bg-black " href="{% url 'blog' %}">My Blog</a>
                 <br>
                 <br>
-                <a class="btn btn-lg btn-secondary fw-bold border-primary bg-black " href="# ">Contact Me</a>
+                <a class="btn btn-lg btn-secondary fw-bold border-primary bg-black " href="https://www.linkedin.com/in/zacharyniehoff/" target="_blank">LinkedIn</a>
+                <a class="btn btn-lg btn-secondary fw-bold border-primary bg-black " href="{% url 'contact' %} ">Contact Me</a>
+                <a class="btn btn-lg btn-secondary fw-bold border-primary bg-black " href="https://github.com/Bixxith" target="_blank">GitHub</a><br>
             </div>
+            <br>
         </main>
 
 

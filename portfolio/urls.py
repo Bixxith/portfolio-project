@@ -23,7 +23,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('portfolio', jobs.views.portfolio, name = 'portfolio' ),
     path('jobs/<int:job_id>', jobs.views.detail, name = 'detail' ), 
-    path('', jobs.views.homepage, name = 'home' )
+    path('', jobs.views.homepage, name = 'home' ),
+    path('aboutme', jobs.views.aboutme, name = 'aboutme'),
+    path('blog', jobs.views.blog, name = 'blog' ),
+    path('contact', jobs.views.contact, name='contact')
 ] 
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -13,3 +13,12 @@ def detail(request, job_id):
 def portfolio(request):
     jobs = Job.objects
     return render(request, 'jobs/portfolio.html', {'jobs':jobs})
+
+def aboutme(request):
+    return render(request, 'jobs/aboutme.html')
+
+def blog(request):
+    return render(request, 'jobs/blog.html')
+
+def contact(request):
+    return render(request, 'jobs/contact.html')
