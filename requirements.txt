@@ -8,3 +8,4 @@ pillow
 django-environ
 environ
 django_heroku
+requests
