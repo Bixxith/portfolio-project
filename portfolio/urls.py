@@ -25,8 +25,8 @@ urlpatterns = [
     path('jobs/<int:job_id>', jobs.views.detail, name = 'detail' ), 
     path('', jobs.views.homepage, name = 'home' ),
     path('aboutme', jobs.views.aboutme, name = 'aboutme'),
-    path('blog', jobs.views.blog, name = 'blog' ),
-    path('contact', jobs.views.contact, name='contact')
+    path('blog', jobs.views.devto, name = 'blog' ),
+
 ] 
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

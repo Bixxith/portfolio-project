@@ -1,1 +1,37 @@
-{% extends "base.html" %} {% block content %} {% load static %} {% endblock %}
+{% extends "base.html" %} {% block content %} {% load static %}{% load jobs_extras %}
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+
+        {% for i,x in blogdata.items %}
+        <div class="col">
+            <a href="{{x.1}}" style="text-decoration: none;">
+                <div class="card text-black container-sm" style="width: 18rem; height: 25rem;">
+                    {% if x.6 %}
+                    <img src="{{x.6}}" class="card-img-top" alt="One"> {% else %}
+                    <img src={% static 'defaultpic.jpg' %} class="card-img-top" alt="Two"> {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title"><u>{{x.0}}</u></h5>
+                        <p class="card-text">Comments: {{x.4}}</p>
+                        <p class="card-text">Reactions: {{x.5}}</p>
+                        <p class="card-text">Tags: {{x.2}}</p>
+                        <p class="card-text">Posted: {{x.3|slice:"0:10"}}</p>
+                    </div>
+
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</div>
+
+{% endblock %}
+
+
+<a href="{{x.1}}" class="no-decor">
+    <div class="bg-primary text-white">
+        <p class="h3">{{x.0}}</p>
+        <p>{{x.4}} {{i}}</p>
+</a>
