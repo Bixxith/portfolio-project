@@ -56,13 +56,14 @@
             <img width="20%" class="img-responsive border border-primary" src={% static 'zach.jpg' %}>
             <div class="">
                 <h1 class="text-black border-primary ">Zachary Niehoff<br>Software Developer</h1>
-                <a href="{% url 'portfolio' %}" class="btn btn-lg btn-secondary fw-bold border-white bg-black ">Portfolio</a>
-                <a class="btn btn-lg btn-secondary fw-bold border-primary bg-black " href="{% url 'aboutme' %}">About Me</a>
+                <div class="col-sm ">
 
-                <a class="btn btn-lg btn-secondary fw-bold border-primary bg-black " href="# ">My Blog</a>
-                <br>
-                <br>
-                <a class="btn btn-lg btn-secondary fw-bold border-primary bg-black " href="# ">Contact Me</a>
+                    <a href="{% url 'portfolio' %} " class="btn btn-lg btn-secondary fw-bold border-primary bg-black ">Portfolio</a>
+                    <a class="btn btn-lg btn-secondary fw-bold border-primary bg-black " href="{% url 'aboutme' %} ">About Me</a>
+
+                    <a class="btn btn-lg btn-secondary fw-bold border-primary bg-black " href="{% url 'blog' %} ">My Blog</a><br><br>
+                    <a class="btn btn-lg btn-secondary fw-bold border-primary bg-black " href="{% static 'ZachNiehoffResume.docx' %}">Résumé</a>
+                </div>
             </div>
         </main>
 
