@@ -3,7 +3,7 @@
     <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
             <h1 class="fw-light">{{ job.title }}</h1>
-            <img src="{{ job.image.url }}" height=300>
+            <img src={% static 'defaultpic.jpg' %} height=300>
             <p class="lead">{{ job.story }}</p>
             <p>
                 <a href="{% url 'portfolio' %}" class="btn btn-primary my-2">Go Back</a>

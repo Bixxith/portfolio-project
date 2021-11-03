@@ -11,7 +11,7 @@
                 <div class="card shadow-sm">
 
                     <a href="{% url 'detail' job.id %}" class="btn my-2">
-                        <img src="{{ job.image.url }}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <img src={% static 'defaultpic.jpg' %} class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                         <p x="50%" y="50%" fill="#eceeef" dy=".3em">{{ job.title }}</p>
 
                     </a>
