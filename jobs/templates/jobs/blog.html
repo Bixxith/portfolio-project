@@ -1,22 +1,36 @@
 {% extends "base.html" %} {% block content %} {% load static %}{% load jobs_extras %}
 
-<div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+<div class="container  py-4 bg-black border">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 ">
 
 
         {% for i,x in blogdata.items %}
-        <div class="col">
-            <a href="{{x.1}}" style="text-decoration: none;">
-                <div class="card text-black container-sm" style="width: 18rem; height: 25rem;">
-                    {% if x.6 %}
-                    <img src="{{x.6}}" class="card-img-top" alt="One"> {% else %}
-                    <img src={% static 'defaultpic.jpg' %} class="card-img-top" alt="Two"> {% endif %}
-                    <div class="card-body">
-                        <h5 class="card-title"><u>{{x.0}}</u></h5>
-                        <p class="card-text">Comments: {{x.4}}</p>
-                        <p class="card-text">Reactions: {{x.5}}</p>
-                        <p class="card-text">Tags: {{x.2}}</p>
-                        <p class="card-text">Posted: {{x.3|slice:"0:10"}}</p>
+        <div class="col ">
+            <a href="{{x.1}} " style="text-decoration: none; ">
+                <div class="card text-black container-sm " style="width: 18rem; height: 25rem; ">
+
+                    <div class="">
+                        {% if x.6 %}
+                        <img src="{{x.6}} " class="card-img-top img-thumbnail pt-2" alt="One "> {% else %}
+                        <img src={% static 'defaultpic.jpg' %} class="card-img-top p-2 img-thumbnail img-fluid " alt="Two "> {% endif %}
+                    </div>
+
+                    <div class="card-body ">
+                        <h5 class="card-title "><u>{{x.0}}</u></h5>
+
+                        <div class=row>
+                            <div class="col">
+                                <p class="card-text ">Comments: {{x.4}}</p>
+                            </div>
+                            <div class="col">
+                                <p class="card-text ">Reactions: {{x.5}}</p>
+                            </div>
+                            <br>
+                        </div>
+                        <br>
+                        <br>
+                        <p class="card-text ">Tags: {{x.2}}</p>
+                        <p class="card-text ">Posted: {{x.3|slice:"0:10 "}}</p>
                     </div>
 
                 </div>

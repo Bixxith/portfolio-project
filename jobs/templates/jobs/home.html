@@ -46,27 +46,31 @@
 
 <body class="d-flex h-100 text-center text-white bg-light">
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column border-2">
         <header class="mb-auto">
 
         </header>
 
-        <main class="px-3">
+        <div class="">
 
-            <img width="20%" class="img-responsive border border-primary" src={% static 'zach.jpg' %}>
-            <div class="">
-                <h1 class="text-black border-primary ">Zachary Niehoff<br>Software Developer</h1>
-                <div class="col-sm ">
+            <img width=" 20% " class="img-responsive border rounded-circle shadow-lg" src={% static 'zach.jpg' %}>
+            <h1 class="text-black border-primary ">Zachary Niehoff<br>Software Developer</h1>
+            <div class=" ">
 
-                    <a href="{% url 'portfolio' %} " class="btn btn-lg btn-secondary fw-bold border-primary bg-black ">Portfolio</a>
-                    <a class="btn btn-lg btn-secondary fw-bold border-primary bg-black " href="{% url 'aboutme' %} ">About Me</a>
+                <div class="row-sm bg-white w-25 p-3 border rounded-3 m-auto rounded-pill border-dark border-2">
 
-                    <a class="btn btn-lg btn-secondary fw-bold border-primary bg-black " href="{% url 'blog' %} ">My Blog</a><br><br>
-                    <a class="btn btn-lg btn-secondary fw-bold border-primary bg-black " href="{% static 'ZachNiehoffResume.docx' %}">Résumé</a>
+                    <a href="{% url 'portfolio' %} " class="btn btn-lg btn-secondary fw-bold bg-black rounded-pill shadow" onmouseover="this.className='btn btn-lg btn-secondary text-black fw-bold border-primary rounded-pill bg-white shadow';" onmouseout="this.className='btn btn-lg btn-secondary rounded-pill fw-bold  bg-black shadow';">Portfolio</a>
+                    <a class="btn btn-lg btn-secondary fw-bold bg-black rounded-pill shadow" onmouseover="this.className='btn btn-lg btn-secondary text-black fw-bold border-primary rounded-pill bg-white shadow';" onmouseout="this.className='btn btn-lg btn-secondary rounded-pill fw-bold  bg-black shadow';"
+                        href="{% url 'aboutme' %} ">About Me</a>
+
+                    <a class="btn btn-lg btn-secondary fw-bold bg-black rounded-pill shadow" onmouseover="this.className='btn btn-lg btn-secondary text-black fw-bold border-primary rounded-pill bg-white shadow';" onmouseout="this.className='btn btn-lg btn-secondary rounded-pill fw-bold  bg-black shadow';"
+                        href="{% url 'blog' %} ">My Blog</a>
+                    <a class="btn btn-lg btn-secondary fw-bold bg-black rounded-pill shadow" onmouseover="this.className='btn btn-lg btn-secondary text-black fw-bold border-primary rounded-pill bg-white shadow';" onmouseout="this.className='btn btn-lg btn-secondary rounded-pill fw-bold  bg-black shadow';"
+                        href="{% static 'ZachNiehoffResume.docx' %} ">Résumé</a>
                 </div>
             </div>
-        </main>
 
+        </div>
 
         <div>{% block content %}{% endblock %}</div>
 
